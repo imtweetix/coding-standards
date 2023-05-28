@@ -373,4 +373,6 @@ document.getElementById('element').classList.add('active');
 $('#element').addClass('active');
 ```
 
-These standards should help maintain consistency across your team's code, while also helping to improve its quality and efficiency.
+## 31. Conclusion
+
+These standards should help maintain consistency across the team's code, while also helping to improve its quality and efficiency.
