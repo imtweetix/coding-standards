@@ -1,6 +1,10 @@
 # JavaScript Coding Standard using ES6 (ECMAScript 2015)
 
-## 1. Use `const` and `let` Instead of `var`
+## 1. Overview
+
+JavaScript ES6, also known as ECMAScript 2015, is a significant update to the language that introduced several advanced features to facilitate the development of complex applications. It brought numerous enhancements to the language that make JavaScript code more readable, maintainable, and easier to write.
+
+## 2. Use `const` and `let` Instead of `var`
 
 Always use `const` or `let` to declare variables instead of `var`. `const` and `let` respect block scope, which can prevent bugs associated with variable hoisting.
 
@@ -14,7 +18,7 @@ var count = 1;
 var name = 'John';
 ```
 
-## 2. Template Literals
+## 3. Template Literals
 
 Use template literals for string interpolation.
 
@@ -26,7 +30,7 @@ const greeting = `Hello, ${name}!`;
 const greeting = 'Hello, ' + name + '!';
 ```
 
-## 3. Arrow Functions
+## 4. Arrow Functions
 
 Use arrow functions for shorter syntax and lexical `this`.
 
@@ -40,7 +44,7 @@ const add = function(a, b) {
 };
 ```
 
-## 4. Default Parameters
+## 5. Default Parameters
 
 Use default parameters instead of setting them inside function bodies.
 
@@ -57,7 +61,7 @@ function multiply(a, b) {
 }
 ```
 
-## 5. Object and Array Destructuring
+## 6. Object and Array Destructuring
 
 Use object and array destructuring to make your code more readable.
 
@@ -75,7 +79,7 @@ const firstName = person.firstName;
 const lastName = person.lastName;
 ```
 
-## 6. Rest and Spread Operators
+## 7. Rest and Spread Operators
 
 Use rest (`...`) and spread operators to write more concise and flexible code.
 
@@ -98,7 +102,7 @@ function printNames() {
 }
 ```
 
-## 7. Use Promises for Asynchronous Programming
+## 8. Use Promises for Asynchronous Programming
 
 Promises provide a cleaner, more elegant syntax for handling asynchronous operations compared to callbacks.
 
@@ -109,7 +113,7 @@ fetch('url')
   .catch(error => console.log(error));
 ```
 
-## 8. Async/Await
+## 9. Async/Await
 
 Use async/await for even cleaner asynchronous code. Async functions return a promise, and the `await` keyword waits for the promise to resolve.
 
@@ -125,7 +129,7 @@ async function fetchData() {
 }
 ```
 
-## 9. Modules
+## 10. Modules
 
 Use ES6 modules (import/export) to structure your code. Modules help keep your codebase clean and organized.
 
@@ -139,7 +143,7 @@ import { add } from './module';
 import multiply from './module';
 ```
 
-## 10. Classes
+## 11. Classes
 
 Use ES6 classes for object-oriented programming. However, remember that JavaScript is prototype-based, and classes are just syntactic sugar.
 
@@ -163,7 +167,7 @@ class Dog extends Animal {
 }
 ```
 
-## 11. Block-Scoped Functions
+## 12. Block-Scoped Functions
 
 Block-scoped functions can help prevent bugs associated with variable hoisting.
 
@@ -183,7 +187,7 @@ if (true) {
 }
 ```
 
-## 12. Shorthand Property Names
+## 13. Shorthand Property Names
 
 Use shorthand property names in object literals.
 
@@ -197,11 +201,11 @@ let a = 1, b = 2;
 const obj = { a: a, b: b };
 ```
 
-## 13. Avoid Using `eval()`
+## 14. Avoid Using `eval()`
 
 The use of `eval()` function is dangerous and leads to security and performance issues.
 
-## 14. Always use `===` and `!==`
+## 15. Always use `===` and `!==`
 
 Always use `===` and `!==` instead of `==` and `!=` as they check both type and value equality.
 
@@ -217,7 +221,7 @@ if (length == 0) {
 }
 ```
 
-## 15. Iterating Over Arrays and NodeLists
+## 16. Iterating Over Arrays and NodeLists
 
 Use `for...of` instead of `for` or `forEach` for looping over arrays or NodeLists.
 
@@ -233,7 +237,7 @@ for (let i = 0; i < array.length; i++) {
 }
 ```
 
-## 16. Exponential Operator
+## 17. Exponential Operator
 
 Use the `` operator for exponentiation.
 
@@ -245,7 +249,7 @@ const square = 5  2;
 const square = Math.pow(5, 2);
 ```
 
-## 17. Parameter Destructuring
+## 18. Parameter Destructuring
 
 Use parameter destructuring for cleaner code.
 
@@ -261,7 +265,7 @@ function fullName(user) {
 }
 ```
 
-## 18. Computed Property Names
+## 19. Computed Property Names
 
 Use computed property names in object literals when property names are dynamic.
 
@@ -273,7 +277,7 @@ const object = {
 };
 ```
 
-## 19. Map Over forEach
+## 20. Map Over forEach
 
 Use `map()` over `forEach()` when you want to create a new array by transforming an existing one.
 
@@ -288,7 +292,7 @@ numbers.forEach(number => {
 });
 ```
 
-## 20. Use `Array.includes()` Over `Array.indexOf()`
+## 21. Use `Array.includes()` Over `Array.indexOf()`
 
 Use `Array.includes()` to check if an array includes a certain value. It's more readable and expresses the intent clearer than `Array.indexOf()`.
 
@@ -304,7 +308,7 @@ if (array.indexOf(value) > -1) {
 }
 ```
 
-## 21. Multiline Strings
+## 22. Multiline Strings
 
 Use template literals for multiline strings.
 
@@ -320,7 +324,7 @@ const string = 'Hello,\n' +
   'world!';
 ```
 
-## 22. Short-circuit Evaluation
+## 23. Short-circuit Evaluation
 
 Use short-circuit evaluation to provide default values.
 
@@ -339,7 +343,7 @@ if (input) {
 }
 ```
 
-## 23. Ternary Operator
+## 24. Ternary Operator
 
 Use the ternary operator for simple conditional expressions.
 
@@ -356,7 +360,7 @@ if (condition) {
 }
 ```
 
-## 24. Avoid Modifying Built-In Prototypes
+## 25. Avoid Modifying Built-In Prototypes
 
 You generally want to avoid extending the prototypes of built-in JavaScript objects.
 
@@ -369,7 +373,7 @@ Array.prototype.diff = function(a) {
 };
 ```
 
-## 25. Use Named Function Expressions
+## 26. Use Named Function Expressions
 
 Using named function expressions can produce more readable stack traces in case of an error.
 
@@ -385,7 +389,7 @@ const foo = function() {
 };
 ```
 
-## 26. Use Function Declarations for Top-Level Functions
+## 27. Use Function Declarations for Top-Level Functions
 
 Function declarations are hoisted, making it easier to understand the flow of your program.
 
@@ -401,7 +405,7 @@ const foo = function() {
 };
 ```
 
-## 27. Proper Error Handling
+## 28. Proper Error Handling
 
 Always use `try...catch` or promise chaining to handle errors.
 
@@ -417,11 +421,11 @@ try {
 performOperation();
 ```
 
-## 28. Don't Extend Native Data Types
+## 29. Don't Extend Native Data Types
 
 Avoid extending native JavaScript objects as it can lead to unexpected behavior for other developers.
 
-## 29. Avoid Using Magic Numbers
+## 30. Avoid Using Magic Numbers
 
 Use constants instead of inserting number literals or other constant values directly into your code.
 
@@ -439,7 +443,7 @@ for(let i = 0; i < 3; i++) {
 }
 ```
 
-## 30. Use Descriptive Variable Names
+## 31. Use Descriptive Variable Names
 
 Descriptive variable names make your code more self-documenting.
 
@@ -451,6 +455,6 @@ let elapsedTimeInDays = 3;
 let e = 3;
 ```
 
-## 31. Conclusion
+## 32. Conclusion
 
 Following these standards will not only make your code more readable and understandable, but it will also make it more maintainable and less prone to bugs.
