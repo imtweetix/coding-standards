@@ -73,62 +73,62 @@ Below are 30 examples of PHP code that follow good coding standards and practice
 
 Always use full PHP tags.
 
-    ```php
-    <?php
-    echo 'Hello, World!';
-    ?>
-    ```
+```php
+<?php
+echo 'Hello, World!';
+?>
+```
 
 ## 2. Encoding
 
 Use UTF-8 without BOM.
 
-    ```php
-    // File encoded in UTF-8 without BOM
-    ```
+```php
+// File encoded in UTF-8 without BOM
+```
 
 ## 3. Side Effects
 
 A file should declare symbols (classes, functions, constants, etc.) or cause side-effects (e.g. generate output, change .ini settings, etc.) but should not do both.
 
-    ```php
-    // File with declarations
-    class MyClass {
-        const MY_CONST = 'Hello, World!';
-        public function myFunction() {}
-    }
-    ```
+```php
+// File with declarations
+class MyClass {
+    const MY_CONST = 'Hello, World!';
+    public function myFunction() {}
+}
+```
 
 ## 4. Namespace and Class Names
 
 Use StudlyCaps (a.k.a. PascalCase) for namespaces and class names.
 
-    ```php
-    namespace MyNamespace;
-    class MyClass {}
-    ```
+```php
+namespace MyNamespace;
+class MyClass {}
+```
 
 ## 5. Class Constants, Properties, and Methods
 
 Class constants should be declared in all upper case with underscore separators. Properties and method names should use camelCase.
 
-    ```php
-    class MyClass {
-        const MY_CONSTANT = 'Constant value';
-        public $myProperty;
-        public function myMethod() {}
-    }
-    ```
+```php
+class MyClass {
+    const MY_CONSTANT = 'Constant value';
+    public $myProperty;
+    public function myMethod() {}
+}
+```
 
 ## 6. Indentation
 
 Code should be indented with 4 spaces, not tabs.
 
-    ```php
-    if ($a === $b) {
-        echo 'A equals B';
-    }
-    ```
+```php
+if ($a === $b) {
+    echo 'A equals B';
+}
+```
 
 ## 7. Line Length and Whitespace
 
@@ -138,277 +138,277 @@ Avoid exceeding 80 characters where possible. A soft limit of 120 should be obse
 
 PHP keywords must be in lower case. The constants `true`, `false`, and `null` must be in lower case.
 
-    ```php
-    if (true) {
-        echo 'True!';
-    }
-    ```
+```php
+if (true) {
+    echo 'True!';
+}
+```
 
 ## 9. Control Structures
 
 There should be one space after the control structure keyword, a space after opening parenthesis, and a space before closing parenthesis.
 
-    ```php
-    if ($a === $b) {
-        echo 'A equals B';
-    } else {
-        echo 'A does not equal B';
-    }
-    ```
+```php
+if ($a === $b) {
+    echo 'A equals B';
+} else {
+    echo 'A does not equal B';
+}
+```
 
 ## 10. Function Calls
 
 There should be no spaces between the function name and opening parenthesis, and no space between parentheses and parameters.
 
-    ```php
-    echo('Hello, World!');
-    ```
+```php
+echo('Hello, World!');
+```
 
 ## 11. Function and Class Braces
 
 Opening braces for classes and methods must go on the next line, and closing braces must go on the next line after the body.
 
-    ```php
-    class MyClass {
-        public function myFunction()
-        {
-            // Some code
-        }
+```php
+class MyClass {
+    public function myFunction()
+    {
+        // Some code
     }
-    ```
+}
+```
 
 ## 12. Visibility and Ordering
 
 [Visibility](https://www.php.net/manual/en/language.oop5.visibility.php) must be declared on all properties and methods. Abstract and Final must be declared before the visibility. Static must be declared after the visibility.
 
-    ```php
-    class MyClass {
-        final public static function myFunction() {}
-    }
-    ```
+```php
+class MyClass {
+    final public static function myFunction() {}
+}
+```
 
 ## 13. Constructor Property Promotion
 
 When using constructor property promotion, [visibility](https://www.php.net/manual/en/language.oop5.visibility.php) must be declared on all properties.
 
-    ```php
-    class Point {
-        public function __construct(
-            private float $x = 0.0,
-            private float $y = 0.0,
-            private float $z = 0.0,
-        ) {}
-    }
-    ```
+```php
+class Point {
+    public function __construct(
+        private float $x = 0.0,
+        private float $y = 0.0,
+        private float $z = 0.0,
+    ) {}
+}
+```
 
 ## 14. Property Types
 
 Property types, introduced in PHP 7.4, should be added where possible. The colon and type declaration must not have any spaces between them.
 
-    ```php
-    class MyClass {
-        private int $myProperty;
-    }
-    ```
+```php
+class MyClass {
+    private int $myProperty;
+}
+```
 
 ## 15. Control Structure Braces
 
 Opening braces for control structures must go on the same line, and the closing brace must go on the next line after the body.
 
-    ```php
-    if ($a === $b) {
-        echo 'A equals B';
-    }
-    ```
+```php
+if ($a === $b) {
+    echo 'A equals B';
+}
+```
 
 ## 16. Control Structure Else and ElseIf
 
 The else and elseif keywords must be on the same line as the closing brace from the earlier body.
 
-    ```php
-    if ($a === $b) {
-        echo 'A equals B';
-    } else {
-        echo 'A does not equal B';
-    }
-    ```
+```php
+if ($a === $b) {
+    echo 'A equals B';
+} else {
+    echo 'A does not equal B';
+}
+```
 
 ## 17. Switch Case
 
 The case statement must be indented once from switch. The break keyword (or other terminating keyword) must be indented at the same level as the case body.
 
-    ```php
-    switch ($expr) {
-        case 0:
-            echo 'First case';
-            break;
-        case 1:
-            echo 'Second case';
-            break;
-        default:
-            echo 'Default case';
-    }
-    ```
+```php
+switch ($expr) {
+    case 0:
+        echo 'First case';
+        break;
+    case 1:
+        echo 'Second case';
+        break;
+    default:
+        echo 'Default case';
+}
+```
 
 ## 18. Method and Function Arguments
 
 In the argument list, there must be a space after each comma, and there must be one space on either side of the equals sign used for default value assignments.
 
-    ```php
-    function sum($a, $b = 0) {
-        return $a + $b;
-    }
-    ```
+```php
+function sum($a, $b = 0) {
+    return $a + $b;
+}
+```
 
 ## 19. Abstract, Final, and Static
 
 When present, the [abstract](https://www.php.net/manual/en/language.oop5.abstract.php) and [final](https://www.php.net/manual/en/language.oop5.final.php) declarations must precede the visibility declaration. When present, the static declaration must follow the visibility declaration.
 
-    ```php
-    abstract class AbstractClass {
-        abstract protected function myFunction();
-    }
+```php
+abstract class AbstractClass {
+    abstract protected function myFunction();
+}
 
-    final class FinalClass {}
+final class FinalClass {}
 
-    class MyClass {
-        public static function myFunction() {}
-    }
-    ```
+class MyClass {
+    public static function myFunction() {}
+}
+```
 
 ## 20. Use Statements
 
 There should be one blank line after the [namespace](https://www.php.net/manual/en/language.namespaces.php) declaration, and one blank line after the [use](https://www.php.net/manual/en/language.namespaces.importing.php) block. Use statements should be alphabetically sorted and grouped.
 
-    ```php
-    namespace MyNamespace;
+```php
+namespace MyNamespace;
 
-    use My\OtherNamespace\MyClass;
-    use My\OtherNamespace\MyOtherClass;
+use My\OtherNamespace\MyClass;
+use My\OtherNamespace\MyOtherClass;
 
-    // Rest of the code
-    ```
+// Rest of the code
+```
 
 ## 21. Return Type Declarations
 
 The colon and type declaration must not have any spaces between them. There must be one space between the nullable operator and the type, and there must be one space between the closing parenthesis and the colon.
 
-    ```php
-    function sum($a, $b): int {
-        return $a + $b;
-    }
-    ```
+```php
+function sum($a, $b): int {
+    return $a + $b;
+}
+```
 
 ## 22. If, Elseif, Else
 
 There should be one space on either side of an equals sign used to assign the return value of a function to a variable.
 
-    ```php
-    $result = sum($a, $b);
-    if ($result === 0) {
-        echo 'Result is zero';
-    } elseif ($result > 0) {
-        echo 'Result is positive';
-    } else {
-        echo 'Result is negative';
-    }
-    ```
+```php
+$result = sum($a, $b);
+if ($result === 0) {
+    echo 'Result is zero';
+} elseif ($result > 0) {
+    echo 'Result is positive';
+} else {
+    echo 'Result is negative';
+}
+```
 
 ## 23. For Loops
 
 There should be one space on either side of the initial assignment, condition check, and increment elements of the for control structure.
 
-    ```php
-    for ($i = 0; $i < 10; $i++) {
-        echo $i;
-    }
-    ```
+```php
+for ($i = 0; $i < 10; $i++) {
+    echo $i;
+}
+```
 
 ## 24. ForEach Loops
 
 For foreach loops that include a key, there should be no space around the arrow.
 
-    ```php
-    foreach ($array as $key => $value) {
-        echo $key . ': ' . $value;
-    }
-    ```
+```php
+foreach ($array as $key => $value) {
+    echo $key . ': ' . $value;
+}
+```
 
 ## 25. Try, Catch
 
 There should be one space on either side of the vertical bar.
 
-    ```php
-    try {
-        // Some code
-    } catch (FirstExceptionType | SecondExceptionType $e) {
-        // Handle exception
-    }
-    ```
+```php
+try {
+    // Some code
+} catch (FirstExceptionType | SecondExceptionType $e) {
+    // Handle exception
+}
+```
 
 ## 26. Closures
 
 Closures must be declared with a space after the function keyword, and a space before and after the use keyword.
 
-    ```php
-    $closureWithArgs = function ($arg1, $arg2) use ($var1, $var2) {
-        // Some code
-    };
-    ```
+```php
+$closureWithArgs = function ($arg1, $arg2) use ($var1, $var2) {
+    // Some code
+};
+```
 
 ## 27. Closure Return Type
 
 Closures may include a return type, following the same rules as normal functions.
 
-    ```php
-    $closureWithArgsAndReturnType = function ($arg1, $arg2) use ($var1, $var2): bool {
-        // Some code
-        return true;
-    };
-    ```
+```php
+$closureWithArgsAndReturnType = function ($arg1, $arg2) use ($var1, $var2): bool {
+    // Some code
+    return true;
+};
+```
 
 ## 28. Anonymous Classes
 
 Anonymous Classes should have the same opening brace placement as regular classes and methods.
 
-    ```php
-    $instance = new class($constructorArgs) {
-        public function myFunction()
-        {
-            // Some code
-        }
-    };
-    ```
+```php
+$instance = new class($constructorArgs) {
+    public function myFunction()
+    {
+        // Some code
+    }
+};
+```
 
 ## 29. Multiline Arguments and Array Elements
 
 When splitting function arguments, method arguments, or array elements across multiple lines, there should be one argument or element per line.
 
-    ```php
-    $array = [
-        'element1',
-        'element2',
-        'element3',
-    ];
-    ```
+```php
+$array = [
+    'element1',
+    'element2',
+    'element3',
+];
+```
 
 ## 30. Commenting
 
 Use `//` for single line comments. Use `/* */` for multi-line comments. Use `/** */` for [PHPDoc](https://docs.phpdoc.org/3.0/guide/getting-started/what-is-a-docblock.html#what-is-a-docblock).
 
-    ```php
-    // This is a single line comment
+```php
+// This is a single line comment
 
-    /*
-    This is a
-    multi-line comment
-    */
+/*
+This is a
+multi-line comment
+*/
 
-    /**
-    * This is a PHPDoc comment
-    * @var string
-    */
-    ```
+/**
+* This is a PHPDoc comment
+* @var string
+*/
+```
 
 ## Conclusion
 
