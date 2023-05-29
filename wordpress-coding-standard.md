@@ -22,8 +22,8 @@ Code should be indented with tabs, not spaces
 
 ```php
 if ( is_single() ) {
-the_post();
-the_content();
+    the_post();
+    the_content();
 }
 ```
 
@@ -157,7 +157,13 @@ define( 'WP_DEBUG', true );
 Never use shorthand PHP start tags
 
 ```php
+// Good
 <?php echo 'Hello, WordPress!'; ?>
+
+// Bad
+<? echo 'Hello, WordPress!'; ?>
+// or
+<?= 'Hello, WordPress!'; ?>
 ```
 
 ## 18. Including Files
