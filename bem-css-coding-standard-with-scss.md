@@ -1,18 +1,16 @@
 # BEM CSS Coding Standard with SCSS
 
-## 1. Overview of BEM
+## Overview of BEM
 
 BEM stands for:
 
 - **Block**: A logically and functionally independent page component, the equivalent of a component in React or Angular. Examples can be a header, container, menu, or footer.
-
 - **Element**: A part of a block that has no standalone meaning and is semantically tied to its block. For example, a menu item is an element that exists within the block menu.
-
 - **Modifier**: A flag on a block or element used to change appearance or behavior. For example, a different color scheme for a button: `button--yellow`.
 
 The BEM structure provides a clear, strict framework that scales well in larger projects. It's easier to understand and maintain. It also provides a solution to common problems like global namespace, code reuse, and maintainability.
 
-## 2. Naming convention
+## 1. Naming convention
 
 The BEM naming conventions follow this pattern:
 
@@ -22,7 +20,7 @@ The BEM naming conventions follow this pattern:
 
 Note the double underscores for elements and the double hyphens for modifiers. This helps visually distinguish between the different parts of your class names.
 
-## 3. Examples
+## 2. Examples
 
 Consider this simple HTML structure for a navigation menu:
 
@@ -59,17 +57,17 @@ In terms of CSS, it would look something like this:
 
 By following this convention, it's easy to determine the nature and purpose of a component just by looking at its name. Furthermore, because class names are scoped to specific blocks, there is less potential for name clashes and you can more easily identify CSS specificity issues.
 
-## 4. Advantages
+## 3. Advantages
 
 - It helps create clear, strict relationships between HTML and CSS.
 - It allows for code reuse while avoiding redundancy.
 - It gives you a clear understanding of your component's structure just by looking at your code, making it easier to understand for other team members.
 
-## 5. SCSS
+## 4. SCSS
 
 SCSS (Sassy CSS) is an extension of CSS. It adds powerful features like variables, mixins, nesting, and more, which make managing CSS easier and more efficient.
 
-## 6. BEM with SCSS
+## 5. BEM with SCSS
 
 SCSS's nesting feature works particularly well with BEM methodology. Here's how you can structure the same navigation menu example using SCSS:
 
@@ -105,7 +103,7 @@ This SCSS code will compile to the following CSS:
 
 The `&` in SCSS refers to the parent selector. So `&__item` will become `.nav__item` when compiled to CSS, and `&--active` will become `.nav__item--active`. This allows you to nest your BEM selectors and keep your SCSS neat and readable.
 
-## 7. Use of Variables and Mixins
+## 6. Use of Variables and Mixins
 
 Variables and mixins in SCSS can make your CSS more efficient and easier to maintain. For instance, if you're using a specific color scheme in your project, you can define these colors as variables and reuse them throughout your SCSS:
 
@@ -147,7 +145,7 @@ Mixins are a way to define reusable styles that can be included in multiple rule
 
 Absolutely. Here are a few more examples of using BEM methodology in combination with SCSS:
 
-## 8. Button Block
+## 7. Button Block
 
 First, let's consider a reusable "button" block with several modifications like size and state.
 
@@ -190,7 +188,7 @@ $danger-color: #f44;
 }
 ```
 
-## 9. Header Block
+## 8. Header Block
 
 Next, let's create a "header" block with elements such as "logo" and "navigation". This block also includes modifiers for elements.
 
@@ -234,7 +232,7 @@ $header-height: 60px;
 }
 ```
 
-## 10. Card Block
+## 9. Card Block
 
 Finally, consider a "card" block with different parts like "image", "title", and "content".
 
@@ -266,6 +264,6 @@ $card-padding: 15px;
 }
 ```
 
-## 11. Conclusion
+## Conclusion
 
 Pairing BEM with SCSS can significantly improve the structure and readability of your CSS. BEM provides a useful naming convention that makes it clear what each class is for, and SCSS adds useful features that make your CSS easier to write and manage. Together, they can help create a more maintainable, understandable, and organized CSS codebase.

@@ -234,7 +234,7 @@ Template literals (`` ` ``) are more readable than using `+` for string concaten
 
 ```javascript
 // Good
-var greeting = `Hello, ${name}!`;
+var greeting = `Hello, ${name}!`; // Take note of the quotes
 
 // Bad
 var greeting = 'Hello, ' + name + '!';
@@ -373,6 +373,6 @@ document.getElementById('element').classList.add('active');
 $('#element').addClass('active');
 ```
 
-## 31. Conclusion
+## Conclusion
 
 These standards should help maintain consistency across the team's code, while also helping to improve its quality and efficiency.
