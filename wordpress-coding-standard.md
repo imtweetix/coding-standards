@@ -10,11 +10,13 @@ Here are 50 coding standards with examples for working in WordPress:
 
 Always use full PHP tags in WordPress
 
+...
     ```php
     <?php
     echo 'Hello, WordPress!';
     ?>
     ```
+    ...
 
 ## 2. Indentation
 
